@@ -31,7 +31,7 @@ function addBook() {
   list[i] = book
   i++
 
-  localStorage.list = list
+  window.localStorage.setItem("stuff", JSON.stringify({ arr: list }))
 }
 
 function removeBook(id: string, p: string) {
@@ -43,17 +43,23 @@ function removeBook(id: string, p: string) {
 }
 
 function loadPrev() {
-  let mList = localStorage.list as number[]
 
-  for (let j = 0; j < mList.length; j++) {
-    let book = mList[j] as any
-    stack(`<div id="${j + book.title}">
+  if (typeof (Storage) !== "undefined") {
+    let mList = JSON.parse(localStorage.getItem("stuff")).arr
+
+    for (let j = 0; j < mList.length; j++) {
+      let book = mList[j] as any
+
+      stack(`<div id="${j + book.title}">
         <p>${book.title}</p>
         <p>${book.author}</p>
         <button id="${j + book.title}" value="${j}" onclick="removeBook(this.id, this.value)">Remove</button>
       </div>
       <hr>`
-    )
+      )
+    }
+  } else {
+    alert(0)
   }
 }
 

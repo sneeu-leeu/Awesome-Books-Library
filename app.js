@@ -18,7 +18,7 @@ function addBook() {
     };
     list[i] = book;
     i++;
-    localStorage.list = list;
+    window.localStorage.setItem("stuff", JSON.stringify({ arr: list }));
 }
 function removeBook(id, p) {
     var position = parseInt(p);
@@ -27,10 +27,15 @@ function removeBook(id, p) {
     localStorage.list = list;
 }
 function loadPrev() {
-    var mList = localStorage.list;
-    for (var j = 0; j < mList.length; j++) {
-        var book = mList[j];
-        stack("<div id=\"" + (j + book.title) + "\">\n        <p>" + book.title + "</p>\n        <p>" + book.author + "</p>\n        <button id=\"" + (j + book.title) + "\" value=\"" + j + "\" onclick=\"removeBook(this.id, this.value)\">Remove</button>\n      </div>\n      <hr>");
+    if (typeof (Storage) !== "undefined") {
+        var mList = JSON.parse(localStorage.getItem("stuff")).arr;
+        for (var j = 0; j < mList.length; j++) {
+            var book = mList[j];
+            stack("<div id=\"" + (j + book.title) + "\">\n        <p>" + book.title + "</p>\n        <p>" + book.author + "</p>\n        <button id=\"" + (j + book.title) + "\" value=\"" + j + "\" onclick=\"removeBook(this.id, this.value)\">Remove</button>\n      </div>\n      <hr>");
+        }
+    }
+    else {
+        alert(0);
     }
 }
 window.onload = loadPrev();
