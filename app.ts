@@ -10,10 +10,10 @@ function addBook() {
   var author = g("a").value
 
   var template = document.createElement("template")
-  template.innerHTML = `<div>
+  template.innerHTML = `<div id="${i+title}">
     <p>${title}</p>
     <p>${author}</p>
-    <button value="${i}" onclick="removeBook(this.value)">Remove</button>
+    <button id="${i+title}" value="${i}" onclick="removeBook(this.id, this.value)">Remove</button>
   </div>
   <hr>`.trim()
 
@@ -30,6 +30,9 @@ function addBook() {
   console.log(list)
 }
 
-function removeBook(p: string) {
+function removeBook(id: string ,p: string) {
   let position = parseInt(p);
+  list.splice(position, 1);
+
+  document.getElementById(id).remove
 }
