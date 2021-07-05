@@ -13,7 +13,7 @@ function stack(templateString) {
 }
 function addBook() {
   let title = g('t').value;
-  let author = g('a').value;unused-lets+ title) + "\">\n      <p>" + title + "</p>\n      <p>" + author + "</p>\n      <button id=\"" + (i + title) + "\" value=\"" + i + "\" onclick=\"removeBook(this.id, this.value)\">Remove</button>\n    </div>\n    <hr>");
+  let author = g('a').value;(unused-lets+ title) + "\">\n      <p>" + title + "</p>\n      <p>" + author + "</p>\n      <button id=\"" + (i + title) + "\" value=\"" + i + "\" onclick=\"removeBook(this.id, this.value)\">Remove</button>\n    </div>\n    <hr>";
   let book = {
     author: author,
     title: title
