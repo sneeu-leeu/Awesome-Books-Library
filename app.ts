@@ -29,7 +29,7 @@ function addBook() {
   }
 
   list[i] = book
-  i++
+  i += 1
 
   window.localStorage.setItem("stuff", JSON.stringify({ arr: list }))
 }
