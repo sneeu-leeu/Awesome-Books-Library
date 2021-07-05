@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 var i = 0
 var list = []
 
@@ -64,3 +65,5 @@ function loadPrev() {
 }
 
 window.onload = loadPrev()
+
+/* eslint-ensable no-unused-vars */
