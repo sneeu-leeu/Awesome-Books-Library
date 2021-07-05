@@ -18,6 +18,6 @@ function addBook() {
     console.log(list);
 }
 function removeBook(p) {
-    alert(p);
+    var position = parseInt(p);
 }
 //# sourceMappingURL=app.js.map

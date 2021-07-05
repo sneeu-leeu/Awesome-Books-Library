@@ -31,5 +31,5 @@ function addBook() {
 }
 
 function removeBook(p: string) {
-  alert(p)
+  let position = parseInt(p);
 }
