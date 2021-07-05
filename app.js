@@ -1,19 +1,19 @@
-/* eslint-disable no-unused-vars */
-var i = 0;
-var list = [];
+/* eslint-disable no-unused-lets */
+let i = 0;
+let list = [];
 function g(j) {
   return document.getElementById(j);
 }
 function stack(templateString) {
-  var template = document.createElement('template');
+  let template = document.createElement('template');
   template.innerHTML = templateString.trim();
   document.getElementById('books').appendChild(template.content.firstChild);
 }
 function addBook() {
-  var title = g('t').value;
-  var author = g('a').value;
+  let title = g('t').value;
+  let author = g('a').value;
   stack("<div id=\"" + (i + title) + "\">\n      <p>" + title + "</p>\n      <p>" + author + "</p>\n      <button id=\"" + (i + title) + "\" value=\"" + i + "\" onclick=\"removeBook(this.id, this.value)\">Remove</button>\n    </div>\n    <hr>");
-  var book = {
+  let book = {
     author: author,
     title: title
   };
@@ -22,16 +22,16 @@ function addBook() {
   window.localStorage.setItem('stuff', JSON.stringify({ arr: list }));
 }
 function removeBook(id, p) {
-  var position = parseInt(p);
+  let position = parseInt(p);
   list.splice(position, 1);
   document.getElementById(id).remove();
   localStorage.list = list;
 }
 function loadPrev() {
   if (typeof (Storage) !== 'undefined') {
-    var mList = JSON.parse(localStorage.getItem('stuff')).arr;
-    for (var j = 0; j < mList.length; j++) {
-      var book = mList[j];
+    let mList = JSON.parse(localStorage.getItem('stuff')).arr;
+    for (let j = 0; j < mList.length; j++) {
+      let book = mList[j];
       stack("<div id=\"" + (j + book.title) + "\">\n        <p>" + book.title + "</p>\n        <p>" + book.author + "</p>\n        <button id=\"" + (j + book.title) + "\" value=\"" + j + "\" onclick=\"removeBook(this.id, this.value)\">Remove</button>\n      </div>\n      <hr>");
     }
   }
@@ -40,5 +40,5 @@ function loadPrev() {
   }
 }
 window.onload = loadPrev();
-/* eslint-ensable no-unused-vars */
+/* eslint-ensable no-unused-lets */
 //# sourceMappingURL=app.js.map
