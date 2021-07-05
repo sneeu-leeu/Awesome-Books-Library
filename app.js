@@ -1,6 +1,7 @@
-/* eslint-disable unused-lets */
-/* eslint-disable const */
-/* eslint-disable template */
+/* eslint-disable no-unused-vars */
+/* eslint-disable prefer-const */
+/* eslint-disable no-unused-expressions */
+/* eslint-disable no-plusplus */
 let i = 0;
 let list = [];
 function g(j) {
@@ -13,10 +14,10 @@ function stack(templateString) {
 }
 function addBook() {
   let title = g('t').value;
-  let author = g('a').value;(unused-lets+ title) + "\">\n      <p>" + title + "</p>\n      <p>" + author + "</p>\n      <button id=\"" + (i + title) + "\" value=\"" + i + "\" onclick=\"removeBook(this.id, this.value)\">Remove</button>\n    </div>\n    <hr>";
+  let author = g('a').value; (unused-lets+ title) + "\">\n      <p>" + title + "</p>\n      <p>" + author + "</p>\n      <button id=\"" + (i + title) + "\" value=\"" + i + "\" onclick=\"removeBook(this.id, this.value)\">Remove</button>\n    </div>\n    <hr>";
   let book = {
     author: author,
-    title: title
+    title: title,
   };
   list[i] = book;
   i += 1;
@@ -41,7 +42,9 @@ function loadPrev() {
   }
 }
 window.onload = loadPrev();
-/* eslint-ensable unused-lets */
-/* eslint-ensable const */
-/* eslint-ensable template */
+/* eslint-enable no-unused-vars */
+/* eslint-enable prefer-const */
+/* eslint-enable no-unused-expressions */
+/* eslint-enable no-plusplus */
+
 //# sourceMappingURL=app.js.map
