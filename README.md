@@ -29,7 +29,7 @@ Implement only a basic UI with plain HTML:
 
 - Github: [@softwareengineermwi](https://github.com/softwareengineermwi)
 - Twitter: [@#####](https://twitter.com/####/)
-- Linkedin: [Mwila Lotfi](https://www.linkedin.com/in/####/)
+- Linkedin: [Mwila Kaunda](https://www.linkedin.com/in/####/)
 
 - Github: [@sneeu-leeu](https://github.com/sneeu-leeu)
 - Twitter: [@Stephan07484055](https://twitter.com/Stephan07484055)
