@@ -34,7 +34,7 @@ function addBook() {
 
   i += 1
 
-  window.localStorage.setItem('stuff', JSON.stringify({ arr: list }))
+  localStorage.setItem('stuff', JSON.stringify({ arr: list }))
 }
 
 function removeBook(id: string, p: string) {
@@ -42,13 +42,13 @@ function removeBook(id: string, p: string) {
   list.splice(position, 1);
 
   document.getElementById(id).remove()
-  localStorage.list = list
+  
+  localStorage.setItem('stuff', JSON.stringify({arr: list}))
 }
 
 /* eslint-disable no-plusplus */
 function loadPrev() {
   const mList = JSON.parse(localStorage.getItem('stuff')).arr
-
   for (let j = 0; j < mList.length; j++) {
     const book = mList[j] as any
 

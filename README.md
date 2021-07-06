@@ -28,8 +28,8 @@ Implement only a basic UI with plain HTML:
 ## 👤 Authors
 
 - Github: [@softwareengineermwi](https://github.com/softwareengineermwi)
-- Twitter: [@#####](https://twitter.com/####/)
-- Linkedin: [Mwila Kaunda](https://www.linkedin.com/in/####/)
+- Twitter: [@#####](https://twitter.com/swengineermwi)
+- Linkedin: [Mwila Kaunda](https://www.linkedin.com/in/mwila-kaunda-5479b2168)
 
 - Github: [@sneeu-leeu](https://github.com/sneeu-leeu)
 - Twitter: [@Stephan07484055](https://twitter.com/Stephan07484055)
