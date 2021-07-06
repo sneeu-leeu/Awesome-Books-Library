@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 let i = 0;
 let list = [];
+let fromLocalStorage = false;
 function g(j) {
   return document.getElementById(j);
 }
@@ -8,6 +9,9 @@ function stack(templateString) {
   const template = document.createElement('template');
   template.innerHTML = templateString.trim();
   document.getElementById('books').appendChild(template.content.firstChild);
+}
+function updateLocalStorage() {
+  localStorage.setItem('stuff', JSON.stringify({ arr: list }));
 }
 function addBook() {
   const title = g('t').value;
@@ -18,31 +22,49 @@ function addBook() {
       <button id="${i + title}" value="${i}" onclick="removeBook(this.id, this.value)">Remove</button>
     </div>
     <hr>`);
-  const locaList = JSON.parse(localStorage.getItem('stuff')).arr;
+  let locaList = JSON.parse(localStorage.getItem('stuff')).arr;
   if (locaList !== undefined) {
+    fromLocalStorage = true;
     list = locaList;
     const book = {};
     book.author = author;
     book.title = title;
     list.push(book);
     i += 1;
-    localStorage.setItem('stuff', JSON.stringify({ arr: list }));
-  } else {
+    updateLocalStorage();
+  }
+  else {
     const book = {};
     book.author = author;
     book.title = title;
     list.push(book);
     i += 1;
-    localStorage.setItem('stuff', JSON.stringify({ arr: list }));
+    updateLocalStorage();
   }
   g('t').value = '';
   g('a').value = '';
 }
 function removeBook(id, p) {
   const position = parseInt(p, 10);
-  list.splice(position, 1);
-  document.getElementById(id).remove();
-  localStorage.setItem('stuff', JSON.stringify({ arr: list }));
+  if (fromLocalStorage) {
+    list.splice(position, 1);
+    document.getElementById(id).remove();
+    updateLocalStorage();
+  }
+  else {
+    let locaList = JSON.parse(localStorage.getItem('stuff')).arr;
+    if (locaList !== undefined) {
+      list = locaList;
+      list.splice(position, 1);
+      document.getElementById(id).remove();
+      updateLocalStorage();
+    }
+    else {
+      list.splice(position, 1);
+      document.getElementById(id).remove();
+      updateLocalStorage();
+    }
+  }
 }
 /* eslint-disable no-plusplus */
 function loadPrev() {
