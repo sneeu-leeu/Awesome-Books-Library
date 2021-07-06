@@ -1,20 +1,21 @@
 
+/* eslint-disable no-unused-vars */
 let i = 0
-let list = []
+const list = []
 
 function g(j: string): HTMLInputElement {
   return document.getElementById(j) as HTMLInputElement
 }
 
 function stack(templateString: string) {
-  let template = document.createElement('template')
+  const template = document.createElement('template')
   template.innerHTML = templateString.trim()
   document.getElementById('books').appendChild(template.content.firstChild)
 }
 
 function addBook() {
-  let title = g('t').value
-  let author = g('a').value
+  const title = g('t').value
+  const author = g('a').value
 
   stack(`<div id="${i + title}">
       <p>${title}</p>
@@ -24,44 +25,43 @@ function addBook() {
     <hr>`
   )
 
-  let book = {
-    author: author,
-    title: title
-  }
+  const book = {}
 
-  list[i] = book
+  book.author = author
+  book.title = title
+
+  list.push(book)
+
   i += 1
 
   window.localStorage.setItem('stuff', JSON.stringify({ arr: list }))
 }
 
 function removeBook(id: string, p: string) {
-  let position = parseInt(p);
+  const position = parseInt(p, 10);
   list.splice(position, 1);
 
   document.getElementById(id).remove()
   localStorage.list = list
 }
 
+/* eslint-disable no-plusplus */
 function loadPrev() {
+  const mList = JSON.parse(localStorage.getItem('stuff')).arr
 
-  if (typeof (Storage) !== 'undefined') {
-    let mList = JSON.parse(localStorage.getItem('stuff')).arr
+  for (let j = 0; j < mList.length; j++) {
+    const book = mList[j] as any
 
-    for (let j = 0; j < mList.length; j++) {
-      let book = mList[j] as any
-
-      stack(`<div id="${j + book.title}">
+    stack(`<div id="${j + book.title}">
         <p>${book.title}</p>
         <p>${book.author}</p>
         <button id="${j + book.title}" value="${j}" onclick="removeBook(this.id, this.value)">Remove</button>
       </div>
       <hr>`
-      )
-    }
-  } else {
-    alert(0)
+    )
   }
 }
 
 window.onload = loadPrev()
+/* eslint-enable no-plusplus */
+/* eslint-enable no-unused-vars */
