@@ -26,6 +26,7 @@ function removeBook(id, p) {
   document.getElementById(id).remove();
   localStorage.list = list;
 }
+
 function loadPrev() {
   if (typeof (Storage) !== "undefined") {
     var mList = JSON.parse(localStorage.getItem("stuff")).arr;
