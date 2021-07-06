@@ -26,7 +26,7 @@ function addBook() {
 
   list[i] = {
     author: author,
-    title: title
+    title: title,
   }
 
   i += 1
