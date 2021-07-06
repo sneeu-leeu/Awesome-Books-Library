@@ -38,7 +38,7 @@ function addBook() {
 }
 
 function removeBook(id: string, p: string) {
-  const position = parseInt(p);
+  const position = parseInt(p, 10);
   list.splice(position, 1);
 
   document.getElementById(id).remove()
