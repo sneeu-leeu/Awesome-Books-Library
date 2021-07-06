@@ -18,7 +18,7 @@ function addBook() {
       <button id="${i + title}" value="${i}" onclick="removeBook(this.id, this.value)">Remove</button>
     </div>
     <hr>`);
-  let locaList = JSON.parse(localStorage.getItem('stuff')).arr;
+  const locaList = JSON.parse(localStorage.getItem('stuff')).arr;
   if (locaList !== undefined) {
     list = locaList;
     const book = {};
@@ -27,8 +27,7 @@ function addBook() {
     list.push(book);
     i += 1;
     localStorage.setItem('stuff', JSON.stringify({ arr: list }));
-  }
-  else {
+  } else {
     const book = {};
     book.author = author;
     book.title = title;
