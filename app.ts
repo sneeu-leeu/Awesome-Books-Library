@@ -25,10 +25,12 @@ function addBook() {
     <hr>`
   )
 
-  list.push({
-    author: author,
-    title: title,
-  })
+  const book = {}
+
+  book.author = author
+  book.title = title
+
+  list.push(book)
 
   i += 1
 
