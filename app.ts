@@ -1,19 +1,20 @@
-var i = 0
-var list = []
+
+let i = 0
+let list = []
 
 function g(j: string): HTMLInputElement {
   return document.getElementById(j) as HTMLInputElement
 }
 
 function stack(templateString: string) {
-  var template = document.createElement("template")
+  let template = document.createElement('template')
   template.innerHTML = templateString.trim()
-  document.getElementById("books").appendChild(template.content.firstChild)
+  document.getElementById('books').appendChild(template.content.firstChild)
 }
 
 function addBook() {
-  var title = g("t").value
-  var author = g("a").value
+  let title = g('t').value
+  let author = g('a').value
 
   stack(`<div id="${i + title}">
       <p>${title}</p>
@@ -23,7 +24,7 @@ function addBook() {
     <hr>`
   )
 
-  var book = {
+  let book = {
     author: author,
     title: title
   }
@@ -31,7 +32,7 @@ function addBook() {
   list[i] = book
   i += 1
 
-  window.localStorage.setItem("stuff", JSON.stringify({ arr: list }))
+  window.localStorage.setItem('stuff', JSON.stringify({ arr: list }))
 }
 
 function removeBook(id: string, p: string) {
@@ -44,8 +45,8 @@ function removeBook(id: string, p: string) {
 
 function loadPrev() {
 
-  if (typeof (Storage) !== "undefined") {
-    let mList = JSON.parse(localStorage.getItem("stuff")).arr
+  if (typeof (Storage) !== 'undefined') {
+    let mList = JSON.parse(localStorage.getItem('stuff')).arr
 
     for (let j = 0; j < mList.length; j++) {
       let book = mList[j] as any
