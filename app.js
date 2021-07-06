@@ -31,6 +31,7 @@ function removeBook(id, p) {
   document.getElementById(id).remove();
   localStorage.list = list;
 }
+/* eslint-disable no-plusplus */
 function loadPrev() {
   const mList = JSON.parse(localStorage.getItem('stuff')).arr;
   for (let j = 0; j < mList.length; j++) {
@@ -44,4 +45,5 @@ function loadPrev() {
   }
 }
 window.onload = loadPrev();
+/* eslint-enable no-plusplus */
 /* eslint-enable no-unused-vars */

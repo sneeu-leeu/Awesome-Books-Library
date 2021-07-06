@@ -43,6 +43,7 @@ function removeBook(id: string, p: string) {
   localStorage.list = list
 }
 
+/* eslint-disable no-plusplus */
 function loadPrev() {
   const mList = JSON.parse(localStorage.getItem('stuff')).arr
 
@@ -60,4 +61,5 @@ function loadPrev() {
 }
 
 window.onload = loadPrev()
+/* eslint-enable no-plusplus */
 /* eslint-enable no-unused-vars */
