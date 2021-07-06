@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 let i = 0;
-const list = [];
+let list = [];
 function g(j) {
   return document.getElementById(j);
 }
@@ -18,12 +18,26 @@ function addBook() {
       <button id="${i + title}" value="${i}" onclick="removeBook(this.id, this.value)">Remove</button>
     </div>
     <hr>`);
-  const book = {};
-  book.author = author;
-  book.title = title;
-  list.push(book);
-  i += 1;
-  window.localStorage.setItem('stuff', JSON.stringify({ arr: list }));
+  let locaList = JSON.parse(localStorage.getItem('stuff')).arr;
+  if (locaList !== undefined) {
+    list = locaList;
+    const book = {};
+    book.author = author;
+    book.title = title;
+    list.push(book);
+    i += 1;
+    localStorage.setItem('stuff', JSON.stringify({ arr: list }));
+  }
+  else {
+    const book = {};
+    book.author = author;
+    book.title = title;
+    list.push(book);
+    i += 1;
+    localStorage.setItem('stuff', JSON.stringify({ arr: list }));
+  }
+  g('t').value = '';
+  g('a').value = '';
 }
 function removeBook(id, p) {
   const position = parseInt(p, 10);
