@@ -18,10 +18,10 @@ function addBook() {
       <button id="${i + title}" value="${i}" onclick="removeBook(this.id, this.value)">Remove</button>
     </div>
     <hr>`);
-  list[i] = {
+  list.push({
     author: author,
     title: title,
-  };
+  });
   i += 1;
   window.localStorage.setItem('stuff', JSON.stringify({ arr: list }));
 }

@@ -25,10 +25,10 @@ function addBook() {
     <hr>`
   )
 
-  list[i] = {
+  list.push({
     author: author,
     title: title,
-  }
+  })
 
   i += 1
 
