@@ -13,4 +13,111 @@ h1 {
   color: #fff;
 }
 
-h
+header nav {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background-color: #1f1d2b;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+  padding: 0 10px;
+}
+
+header nav ul li a::after {
+  content: ']';
+  position: absolute;
+  display: block;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #e07612;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav ul li a::before {
+  content: '[';
+  position: absolute;
+  display: block;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #e07612;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav .logo a {
+  color: #e07612;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+header nav ul .active a {
+  color: #e07612;
+}
+
+header nav ul li a:hover {
+  color: #e07612;
+}
+
+header nav ul li a:hover::before {
+  opacity: 1;
+  left: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover::after {
+  opacity: 1;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+header .time-date {
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  background-color: #252836;
+}
+
+header .time-date p {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  font-size: 14px;
+}
