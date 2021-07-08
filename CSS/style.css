@@ -35,13 +35,9 @@ main .book-ul li {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 12px 15px;
+  padding: 20px 20px;
   color: #3e92ff;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-main .contact ul li {
-  color: #fff;
 }
 
 main .book-ul li:last-child {
@@ -51,19 +47,18 @@ main .book-ul li:last-child {
 main .book-ul li .removeBtn {
   color: #fff;
   background-color: #3e92ff;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   border: 1px solid #3e92ff;
   padding: 12px 30px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  outline: none;
-  cursor: pointer;
+
 }
 
 main .book-ul li .removeBtn:hover {
   background-color: transparent;
   color: #3e92ff;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
 }
 
 main form {
@@ -111,14 +106,4 @@ main form button:hover {
   color: #3e92ff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-main .contact {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-main .contact p {
-  margin-bottom: 20px;
-  color: #fff;
 }
