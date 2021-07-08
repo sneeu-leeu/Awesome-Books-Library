@@ -8,6 +8,8 @@ class Book {
     const localList = JSON.parse(localStorage.getItem('stuff'));
     if (localList !== null) {
       this.#list = localList.arr;
+    } else {
+      this.#list = [];
     }
   }
 
@@ -25,11 +27,11 @@ class Book {
     document.getElementById('books').innerHTML = '';
     for (let j = 0; j < this.#list.length; j++) {
       const book = this.#list[j];
-      this.#stack(`<div id="${book.title}">
-        <p>${book.title}</p>
+      this.#stack(`<li id="${book.title}">
+        <p>"${book.title}"</p> by
         <p>${book.author}</p>
         <button class="removeBtn" id="${j + book.title}" value="${j}" onclick="target(this)">Remove</button>
-      </div>
+      </li>
       <hr>`);
     }
   }
