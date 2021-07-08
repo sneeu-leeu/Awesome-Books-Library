@@ -1,5 +1,6 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-unused-vars */
+/* eslint-disable class-methods-use-this */
 class Book {
   #list
 
@@ -10,7 +11,7 @@ class Book {
     }
   }
 
-  #g(j) {
+  #grab(j) {
     return document.getElementById(j);
   }
 
@@ -24,11 +25,11 @@ class Book {
     document.getElementById('books').innerHTML = '';
     for (let j = 0; j < this.#list.length; j++) {
       const book = this.#list[j];
-      this.#stack(`<li id="${book.title}">
-        <p>"${book.title}"</p> by
+      this.#stack(`<div id="${book.title}">
+        <p>${book.title}</p>
         <p>${book.author}</p>
-        <button class= "removeBtn" id="${j + book.title}" value="${j}" onclick="target(this)">Delete</button>
-      </li>
+        <button class="removeBtn" id="${j + book.title}" value="${j}" onclick="target(this)">Remove</button>
+      </div>
       <hr>`);
     }
   }
@@ -40,16 +41,16 @@ class Book {
   }
 
   addBook() {
-    const title = this.#g('title').value;
-    const author = this.#g('author').value;
+    const title = this.#grab('title').value;
+    const author = this.#grab('author').value;
     const book = {};
     book.author = author;
     book.title = title;
     this.#list.push(book);
     this.updateLocalStorage();
     this.updateList();
-    this.#g('t').value = '';
-    this.#g('a').value = '';
+    this.#grab('title').value = '';
+    this.#grab('author').value = '';
   }
 
   removeBook(id, position) {
@@ -67,3 +68,4 @@ class Book {
 }
 /* eslint-enable no-plusplus */
 /* eslint-enable no-unused-vars */
+/* eslint-enable class-methods-use-this */
