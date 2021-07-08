@@ -1,4 +1,4 @@
-
+/* eslint-disable plusplus */
 class Book {
   #list
   constructor() {
@@ -27,8 +27,7 @@ class Book {
         <p>${book.author}</p>
         <button id="${j + book.title}" value="${j}" onclick="target(this)">Remove</button>
       </div>
-      <hr>`,
-      );
+      <hr>`, );
     }
   }
 
@@ -64,3 +63,4 @@ class Book {
     this.updateList();
   }
 }
+/* eslint-enable plusplus */
