@@ -1,5 +1,6 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-unused-vars */
+/* eslint-disable class-methods-use-this */
 class Book {
   #list
 
@@ -67,3 +68,4 @@ class Book {
 }
 /* eslint-enable no-plusplus */
 /* eslint-enable no-unused-vars */
+/* eslint-enable class-methods-use-this */
