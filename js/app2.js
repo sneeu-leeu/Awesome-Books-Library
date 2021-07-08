@@ -25,9 +25,9 @@ class Book {
     for (let j = 0; j < this.#list.length; j++) {
       const book = this.#list[j];
       this.#stack(`<li id="${book.title}">
-        <p>${book.title}</p>
+        <p>"${book.title}"</p> by
         <p>${book.author}</p>
-        <button id="${j + book.title}" value="${j}" onclick="target(this)">Remove</button>
+        <button class= "removeBtn" id="${j + book.title}" value="${j}" onclick="target(this)"><i class="far fa-trash-alt"></i></button>
       </li>
       <hr>`);
     }
