@@ -1,3 +1,4 @@
+
 class Book {
   #list
   constructor() {
@@ -6,14 +7,17 @@ class Book {
       this.#list = localList.arr
     };
   }
+
   #g(j) {
     return document.getElementById(j);
   }
+
   #stack(templateString) {
     const template = document.createElement('template');
     template.innerHTML = templateString.trim();
     document.getElementById('books').appendChild(template.content.firstChild);
   }
+
   updateList() {
     document.getElementById('books').innerHTML = '';
     for (let j = 0; j < this.#list.length; j++) {
@@ -23,15 +27,17 @@ class Book {
         <p>${book.author}</p>
         <button id="${j + book.title}" value="${j}" onclick="target(this)">Remove</button>
       </div>
-      <hr>`
-      )
+      <hr>`,
+      );
     }
   }
+
   updateLocalStorage() {
     localStorage.setItem('stuff', JSON.stringify({
-      arr: this.#list
+      arr: this.#list,
     }));
   }
+
   addBook() {
     const title = this.#g('t').value;
     const author = this.#g('a').value;
@@ -44,6 +50,7 @@ class Book {
     this.#g('t').value = '';
     this.#g('a').value = '';
   }
+
   removeBook(id, position) {
     const p = parseInt(position, 10);
     document.getElementById(id).remove();
@@ -52,7 +59,8 @@ class Book {
     this.updateLocalStorage();
     this.updateList();
   }
+
   loadPrev() {
-    this.updateList()
-  };
+    this.updateList();
+  }
 }
