@@ -8,6 +8,8 @@ class Book {
     const localList = JSON.parse(localStorage.getItem('stuff'));
     if (localList !== null) {
       this.#list = localList.arr;
+    } else {
+      this.#list = [];
     }
   }
 
@@ -23,16 +25,14 @@ class Book {
 
   updateList() {
     document.getElementById('books').innerHTML = '';
-    if (this.#list !== undefined) {
-      for (let j = 0; j < this.#list.length; j++) {
-        const book = this.#list[j];
-        this.#stack(`<div id="${book.title}">
-          <p>${book.title}</p>
-          <p>${book.author}</p>
-          <button id="${j + book.title}" value="${j}" onclick="target(this)">Remove</button>
-        </div>
-        <hr>`);
-      }
+    for (let j = 0; j < this.#list.length; j++) {
+      const book = this.#list[j];
+      this.#stack(`<div id="${book.title}">
+        <p>${book.title}</p>
+        <p>${book.author}</p>
+        <button id="${j + book.title}" value="${j}" onclick="target(this)">Remove</button>
+      </div>
+      <hr>`);
     }
   }
 
