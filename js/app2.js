@@ -1,7 +1,6 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable no-unused-vars */
 class Book {
-
   #list
 
   constructor() {
@@ -66,5 +65,5 @@ class Book {
     this.updateList();
   }
 }
-/* eslint-enable plusplus */
+/* eslint-enable no-plusplus */
 /* eslint-enable no-unused-vars */
