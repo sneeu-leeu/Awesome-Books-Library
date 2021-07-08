@@ -10,12 +10,12 @@ class Book {
     }
   }
 
-  #g(j) {
-    return this.document.getElementById(j);
+  #grab(j) {
+    return document.getElementById(j);
   }
 
   #stack(templateString) {
-    const template = this.document.createElement('template');
+    const template = document.createElement('template');
     template.innerHTML = templateString.trim();
     document.getElementById('books').appendChild(template.content.firstChild);
   }
@@ -40,16 +40,16 @@ class Book {
   }
 
   addBook() {
-    const title = this.#g('t').value;
-    const author = this.#g('a').value;
+    const title = this.#grab('title').value;
+    const author = this.#grab('author').value;
     const book = {};
     book.author = author;
     book.title = title;
     this.#list.push(book);
     this.updateLocalStorage();
     this.updateList();
-    this.#g('t').value = '';
-    this.#g('a').value = '';
+    this.#grab('title').value = '';
+    this.#grab('author').value = '';
   }
 
   removeBook(id, position) {

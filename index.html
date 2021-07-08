@@ -19,11 +19,11 @@
     <br>
     <div>
       <div>
-        <input type="text" placeholder="Title" name="title" id="t">
+        <input type="text" placeholder="Title" name="title" id="title">
       </div>
       <br>
       <div>
-        <input type="text" name="author" placeholder="Author" id="a">
+        <input type="text" name="author" placeholder="Author" id="author">
       </div>
       <br>
 
@@ -33,18 +33,7 @@
   </div>
 
   <script src="js/app2.js"></script>
-  <script>
-    const book = new Book()
-    book.loadPrev()
-
-    document.getElementById('add_book').addEventListener('click', () => {
-      book.addBook()
-    })
-
-    function target(element) {
-      book.removeBook(element.id, element.value)
-    }
-  </script>
+  <script src="js/handler.js"></script>
 </body>
 
 </html>
