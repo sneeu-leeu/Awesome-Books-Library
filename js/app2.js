@@ -1,19 +1,22 @@
-/* eslint-disable plusplus */
+/* eslint-disable no-plusplus */
+/* eslint-disable no-unused-vars */
 class Book {
+
   #list
+
   constructor() {
     const localList = JSON.parse(localStorage.getItem('stuff'));
     if (localList !== null) {
-      this.#list = localList.arr
-    };
+      this.#list = localList.arr;
+    }
   }
 
   #g(j) {
-    return document.getElementById(j);
+    return this.document.getElementById(j);
   }
 
   #stack(templateString) {
-    const template = document.createElement('template');
+    const template = this.document.createElement('template');
     template.innerHTML = templateString.trim();
     document.getElementById('books').appendChild(template.content.firstChild);
   }
@@ -27,7 +30,7 @@ class Book {
         <p>${book.author}</p>
         <button id="${j + book.title}" value="${j}" onclick="target(this)">Remove</button>
       </div>
-      <hr>`, );
+      <hr>`);
     }
   }
 
@@ -64,3 +67,4 @@ class Book {
   }
 }
 /* eslint-enable plusplus */
+/* eslint-enable no-unused-vars */
