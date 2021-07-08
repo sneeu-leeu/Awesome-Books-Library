@@ -27,7 +27,7 @@ class Book {
       this.#stack(`<li id="${book.title}">
         <p>"${book.title}"</p> by
         <p>${book.author}</p>
-        <button class= "removeBtn" id="${j + book.title}" value="${j}" onclick="target(this)"><i class="far fa-trash-alt"></i></button>
+        <button class= "removeBtn" id="${j + book.title}" value="${j}" onclick="target(this)"><i class="fa fa-trash"></i></button>
       </li>
       <hr>`);
     }
