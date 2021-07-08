@@ -9,30 +9,33 @@
 </head>
 
 <body>
-  <div>
-    <h1>Awesome Books</h1>
-
-    <div id="books">
-
-    </div>
-
-    <br>
-    <div>
-      <div>
-        <input type="text" placeholder="Title" name="title" id="t">
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">Awesome Books Library</a>
       </div>
-      <br>
-      <div>
-        <input type="text" name="author" placeholder="Author" id="a">
-      </div>
-      <br>
+    </nav>
+  </header>
 
-      <button id="add_book">Add</button>
-      <br>
-    </div>
-  </div>
+  <main>
+    <h1>Collection of Awesome Books</h1>
+    <ul class="book-ul" id="books">
+    </ul>
 
-  <script src="js/app2.js"></script>
+    <form>
+      <input type="text" placeholder="title" required minlength="3" id="title"> 
+      <input type="text" placeholder="author" required minlength="3" id="author">
+      <button class="add" id="add_book">Add</button>
+    </form>
+  </main>
+
+  <footer>
+    <p><i class="far fa-copyright"></i></p>
+  </footer>
+  
+  <script src='./js/app2.js'></script>
+
+
   <script>
     const book = new Book()
     book.loadPrev()
