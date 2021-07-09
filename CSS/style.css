@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+header nav {
+  background-color: #3e92ff;
+}
+
 h1 {
   font-size: 44px;
   text-align: center;
