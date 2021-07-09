@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-undef */
+/* eslint-disable no-implied-eval */
 const book = new Book();
 book.loadPrev();
 
@@ -12,7 +13,7 @@ function target(element) {
 }
 
 function displayC() {
-  let refresh = 1000; // Refresh rate in milli seconds
+  const refresh = 1000; // Refresh rate in milli seconds
   mytime = setTimeout('display_ct()', refresh);
 }
 
@@ -44,5 +45,6 @@ function switchPage(target) {
       break;
   }
 }
+/* eslint-enable no-implied-eval */
 /* eslint-enable no-unused-vars */
 /* eslint-enable no-undef */
