@@ -4,7 +4,7 @@ In this project, we have built a basic website that allows users to add/remove b
 
 ## Live Link
 
-[Live Link](https://softwareengineermwi.github.io/lib/)
+[Live Link](https://sneeu-leeu.github.io/lib/)
 
 ## Project Requirements
 
