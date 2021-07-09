@@ -10,21 +10,59 @@
 </head>
 
 <body>
+  <header>
+    <nav class="flex">
+      <p class="nav_font">Awesome Books</p>
+      <ul class="flex nav_font">
+        <li class="padding-r"><a href="javascript:switchPage('toList')" >List</a></li>
+        <li class="border-l padding-r"><a href="javascript:switchPage('toAdd')" >Add Book</a></li>
+        <li class="border-l"><a href="javascript:switchPage('toContact')">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <main>
-    <h1>Library of Must Read Books</h1>
-    <ul class="book-ul" id="books">
-    </ul>
+    
+    <div class="time flex">
+      <span id="ct" class="white">July 9, 2021, 11:44PM</span>
+    </div>
 
-    <form>
-      <h1>Add New Book</h1>
-      <input type="text" placeholder="Title" required minlength="3" id="title"> 
-      <input type="text" placeholder="Author" required minlength="3" id="author">
-      <button class="add" id="add_book">Add</button>
-    </form>
+    <div id="list">
+      <h1>Library of Must Read Books</h1>
+      <ul class="book-ul" id="books"></ul>
+    </div>
+
+    <div id="foo_book" class="hide">
+      <h1>Add Book</h1>
+      <form>
+        <input type="text" placeholder="Title" required minlength="3" id="title">
+        <input type="text" placeholder="Author" required minlength="3" id="author">
+        <button class="add" id="add_book">Add</button>
+      </form>
+    </div>
+
+    <div id="contact" class="hide">
+      <h1>Contact Information:</h1>
+      <div class="contact-div">
+        <h3>If you have any questions or you just want to say "Hello!", reach us on:</h3>
+        <div class="ul-div">
+          <ul class="Cont-dets">
+            <li>Email: ourEmail@email.email</li>
+            <li>Phone: +2345 456789</li>
+            <li>Post Address: 13 Nowhere street, NowhereVille, Nowhere, 2045</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </main>
+  <footer>
+    <p>CopyRight </p>
+  </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/luxon@1.27.0/build/global/luxon.min.js"></script>
   <script src="js/app2.js"></script>
-  <script src="js/handler.js"></script>
+  <script src="js/books.js"></script>
 </body>
 
 </html>
