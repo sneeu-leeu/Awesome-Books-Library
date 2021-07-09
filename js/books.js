@@ -17,15 +17,15 @@ function display_c() {
 }
 
 function display_ct() {
-  var x = new Date();
-  var x1 = x.toUTCString();// changing the display to UTC string
+  const x = new Date();
+  const x1 = x.toUTCString();// changing the display to UTC string
   document.getElementById('ct').innerHTML = x1;
   tt = display_c();
 }
 
 display_ct();
 
-function _switch(target) {
+function switchPage(target) {
   switch (target) {
     case 'toAdd':
       document.getElementById('list').style.display = 'none';
@@ -41,7 +41,7 @@ function _switch(target) {
       document.getElementById('list').style.display = 'block';
       document.getElementById('foo_book').style.display = 'none';
       document.getElementById('contact').style.display = 'none';
-    break;
+      break;
   }
 }
 /* eslint-enable no-unused-vars */
