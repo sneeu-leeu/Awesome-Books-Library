@@ -29,17 +29,17 @@ function _switch(target) {
   switch (target) {
     case 'toList':
       document.getElementById('list').style.display = "block"
-      document.getElementById('add_book').style.display = "none"
+      document.getElementById('foo_book').style.display = "none"
       document.getElementById('contact').style.display = "none"
       break
     case 'toAdd':
       document.getElementById('list').style.display = "none"
-      document.getElementById('add_book').style.display = "block"
+      document.getElementById('foo_book').style.display = "block"
       document.getElementById('contact').style.display = "none"
       break
     case 'toContact':
       document.getElementById('list').style.display = "none"
-      document.getElementById('add_book').style.display = "none"
+      document.getElementById('foo_book').style.display = "none"
       document.getElementById('contact').style.display = "block"
       break
   }
