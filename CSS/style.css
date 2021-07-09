@@ -93,12 +93,10 @@ main {
   border: 1px solid #3e92ff;
   border-radius: 5%;
   padding: 15px 15px;
-  z-index: 1;
 }
 
 main .book-ul li .removeBtn .far {
-  color :#fff;
-  z-index: 10;
+  color: #fff;
 }
 
 main .book-ul li .removeBtn:hover {
