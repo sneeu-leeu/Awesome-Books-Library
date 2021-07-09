@@ -22,14 +22,14 @@ main {
   background-color: #11141f;
 }
 
-main .book-ul {
+.book-ul {
   max-width: 850px;
   margin: auto;
   list-style: none;
   background-color: #1f1d2b;
 }
 
-main .book-ul li {
+.book-ul li {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: justify;
@@ -43,11 +43,11 @@ main .book-ul li {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-main .book-ul li:last-child {
+.book-ul li:last-child {
   border-bottom: none;
 }
 
-main .book-ul li .removeBtn {
+.book-ul li .removeBtn {
   color: #fff;
   background-color: #ff7b00;
   -webkit-transition: 0.6s;

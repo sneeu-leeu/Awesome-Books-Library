@@ -7,6 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/style.css">
   <title>Document</title>
+
+  <style>
+    .hide {
+      display: none;
+    }
+    .white {
+      color: aliceblue;
+    }
+  </style>
 </head>
 
 <body>
@@ -16,30 +25,49 @@
         <p><a>Awesome Books</a></p>
       </ul>
       <ul class="right-list">
-        <li><a>List</a></li>
-        <li><a>Add Book</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="javascript:_switch('toList')" >List</a></li>
+        <li><a href="javascript:_switch('toAdd')" >Add Book</a></li>
+        <li><a href="javascript:_switch('toContact')">Contact</a></li>
       </ul>
     </nav>
-  
-  </header>
-  <main>
-    <h1>Library of Must Read Books</h1>
-    <ul class="book-ul" id="books">
-    </ul>
 
-    <form>
-      <input type="text" placeholder="Title" required minlength="3" id="title"> 
-      <input type="text" placeholder="Author" required minlength="3" id="author">
-      <button class="add" id="add_book">Add</button>
-    </form>
+  </header>
+
+  <main>
+    <div>
+      <span id="ct" class="white">July 9, 2021, 11:44PM</span>
+    </div>
+
+    <div id="list">
+      <h1>Library of Must Read Books</h1>
+      <ul class="book-ul" id="books"></ul>
+    </div>
+
+    <div id="add_book" class="hide">
+      <h1>Library of Must Read Books</h1>
+      <form>
+        <input type="text" placeholder="Title" required minlength="3" id="title">
+        <input type="text" placeholder="Author" required minlength="3" id="author">
+        <button class="add" id="add_book">Add</button>
+      </form>
+    </div>
+
+    <div id="contact" class="hide">
+      <h1>contact Information:</h1>
+      <h3>If you have any questions or you just want to say "Hello!", reach us on:</h3>
+      <ul class="Cont-dets">
+        <li>Email: ourEmail@email.email</li>
+        <li>Phone: +2345 456789</li>
+        <li>Post Address: 13 Nowhere street, Nowhere, Nowhere, 2045</li>
+      </ul>
+    </div>
   </main>
   <footer>
     <p class="copyR">CopyRight <i class="far fa-copyright"></i></p>
   </footer>
 
   <script src="js/app2.js"></script>
-  <script src="js/handler.js"></script>
+  <script src="js/books.js"></script>
 </body>
 
 </html>
