@@ -7,6 +7,10 @@ document.getElementById('add_book').addEventListener('click', () => {
   book.addBook();
 });
 
+function target(element) {
+  book.removeBook(element.id, element.value);
+}
+
 function display_c() {
   var refresh = 1000; // Refresh rate in milli seconds
   mytime = setTimeout('display_ct()', refresh)

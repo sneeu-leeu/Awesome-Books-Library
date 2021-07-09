@@ -24,9 +24,15 @@ header nav p {
   margin-left: 0.5rem;
 }
 
+header nav ul {
+  margin-right: 6rem ;
+}
+
 header nav li {
   list-style: none;
   margin-right: 10px;
+  padding-left: 10px;
+  border-left: rgb(255, 255, 255);
 }
 
 header nav li a {
@@ -34,6 +40,12 @@ header nav li a {
   text-decoration: none;
 }
 
+.time {
+  width: 100%;
+  justify-content: flex-end;
+  padding: 15px;
+  font-size: 1.2em;
+}
 
 h1 {
   font-size: 44px;
@@ -44,7 +56,7 @@ h1 {
 }
 
 main {
-  min-height: 85vh;
+  min-height: 82vh;
   background-color: #11141f;
 }
 
@@ -141,4 +153,31 @@ main form button:hover {
   color: #3e92ff;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+.contact-div {
+  color: #c4c4c4;
+  margin: 0% 15%;
+}
+
+.contact-div h3 {
+  font-size: 1.6rem;
+}
+
+.contact-div .ul-div {
+  margin: 2em 2em;
+}
+
+.contact-div ul li {
+  margin: 1em 0em;
+}
+
+footer {
+  background-color: #3e92ff;
+  height: 8vh;
+}
+
+footer p {
+  padding: 20px;
+  font-size: 1.4rem;
 }
