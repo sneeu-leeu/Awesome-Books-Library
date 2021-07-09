@@ -5,32 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/style.css">
   <title>Document</title>
 </head>
 
 <body>
-  <div>
-    <h1>Awesome Books</h1>
+  <main>
+    <h1>Library of Must Read Books</h1>
+    <ul class="book-ul" id="books">
+    </ul>
 
-    <div id="books">
-
-    </div>
-
-    <br>
-    <div>
-      <div>
-        <input type="text" placeholder="Title" name="title" id="title">
-      </div>
-      <br>
-      <div>
-        <input type="text" name="author" placeholder="Author" id="author">
-      </div>
-      <br>
-
-      <button id="add_book">Add</button>
-      <br>
-    </div>
-  </div>
+    <form>
+      <h1>Add New Book</h1>
+      <input type="text" placeholder="Title" required minlength="3" id="title"> 
+      <input type="text" placeholder="Author" required minlength="3" id="author">
+      <button class="add" id="add_book">Add</button>
+    </form>
+  </main>
 
   <script src="js/app2.js"></script>
   <script src="js/handler.js"></script>

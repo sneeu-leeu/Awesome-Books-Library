@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 44px;
+  text-align: center;
+  padding-top: 40px;
+  margin-bottom: 50px;
+  color: #fff;
+}
+
+main {
+  min-height: 100vh;
+  background-color: #11141f;
+}
+
+main .book-ul {
+  max-width: 850px;
+  margin: auto;
+  list-style: none;
+  background-color: #1f1d2b;
+}
+
+main .book-ul li {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 20px 20px;
+  color: #3e92ff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+main .book-ul li:last-child {
+  border-bottom: none;
+}
+
+main .book-ul li .removeBtn {
+  color: #fff;
+  background-color: #ff7b00;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  border: 1px solid #ff7b00;
+  border-radius: 5%;
+  padding: 15px 15px;
+}
+
+main .book-ul li .removeBtn .far {
+  color: #fff;
+}
+
+main .book-ul li .removeBtn:hover {
+  background-color: transparent;
+  color: #3e92ff;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+main form {
+  margin: 0 auto;
+  padding: 100px 0;
+  max-width: 300px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+main form input {
+  width: 100%;
+  margin-bottom: 10px;
+  height: 45px;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+  padding: 0 5px;
+  -webkit-box-shadow: 0 3px 8px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.3);
+}
+
+main form button {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  color: #fff;
+  background-color: #3e92ff;
+  border: 1px solid #3e92ff;
+  padding: 12px 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  outline: none;
+  width: 100%;
+}
+
+main form button:hover {
+  background-color: transparent;
+  color: #3e92ff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
