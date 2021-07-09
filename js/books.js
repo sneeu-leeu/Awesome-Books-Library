@@ -11,19 +11,19 @@ function target(element) {
   book.removeBook(element.id, element.value);
 }
 
-function display_c() {
-  var refresh = 1000; // Refresh rate in milli seconds
+function displayC() {
+  let refresh = 1000; // Refresh rate in milli seconds
   mytime = setTimeout('display_ct()', refresh);
 }
 
-function display_ct() {
+function displayCt() {
   const x = new Date();
   const x1 = x.toUTCString();// changing the display to UTC string
   document.getElementById('ct').innerHTML = x1;
-  tt = display_c();
+  tt = displayC();
 }
 
-display_ct();
+displayCt();
 
 function switchPage(target) {
   switch (target) {
