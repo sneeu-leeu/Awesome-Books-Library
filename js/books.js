@@ -14,13 +14,12 @@ function target(element) {
 
 function displayC() {
   const refresh = 1000; // Refresh rate in milli seconds
-  mytime = setTimeout('display_ct()', refresh);
+  mytime = setTimeout('displayCt()', refresh);
 }
 
 function displayCt() {
-  const x = new Date();
-  const x1 = x.toUTCString();// changing the display to UTC string
-  document.getElementById('ct').innerHTML = x1;
+  const x1 = luxon.DateTime;
+  document.getElementById('ct').innerHTML = x1.now();
   tt = displayC();
 }
 
